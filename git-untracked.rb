@@ -5,23 +5,23 @@
 class GitUntracked < Formula
   desc "Propagate untracked files from the main worktree to other git worktrees."
   homepage "https://github.com/linyows/git-untracked"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/linyows/git-untracked/releases/download/v0.1.0/git-untracked_darwin_x86_64.tar.gz"
-      sha256 "a460e74ea168ae88fb0a7dbb1608e41db7d9c1d345f07d188addda042e244bf1"
+      url "https://github.com/linyows/git-untracked/releases/download/v0.2.0/git-untracked_darwin_x86_64.tar.gz"
+      sha256 "faa0d77c175eb785b0a342e3177fb3ea618b150dc1b32ca9095991bca0643efb"
 
       define_method(:install) do
         bin.install "git-untracked"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/linyows/git-untracked/releases/download/v0.1.0/git-untracked_darwin_arm64.tar.gz"
-      sha256 "0f43ab401166a5cfe0c0f6319000de021dae33742ef66b41ab4012000bb648c2"
+      url "https://github.com/linyows/git-untracked/releases/download/v0.2.0/git-untracked_darwin_arm64.tar.gz"
+      sha256 "5e73074a518a8bc66e4d84f0e15e51924955fb80da90bff7d6f7c306ef84d875"
 
       define_method(:install) do
         bin.install "git-untracked"
@@ -31,15 +31,15 @@ class GitUntracked < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/linyows/git-untracked/releases/download/v0.1.0/git-untracked_linux_x86_64.tar.gz"
-      sha256 "844c269f517c5fcc1a1667a30127e615f24d1e17813aafe99597f2ea664bca7c"
+      url "https://github.com/linyows/git-untracked/releases/download/v0.2.0/git-untracked_linux_x86_64.tar.gz"
+      sha256 "ea99608ac97c9429d953d2638a420f7e9276c08b83539bef7db4cdc52bea745c"
       define_method(:install) do
         bin.install "git-untracked"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/linyows/git-untracked/releases/download/v0.1.0/git-untracked_linux_arm64.tar.gz"
-      sha256 "43671126dd4ccfce7297c1d4d7269ffc11dc86efe06b462f6084d1b78db6567e"
+      url "https://github.com/linyows/git-untracked/releases/download/v0.2.0/git-untracked_linux_arm64.tar.gz"
+      sha256 "a8b6620a72fe2e86667aedf3451f90ca391581bf125154e21d00d0fd30545fcc"
       define_method(:install) do
         bin.install "git-untracked"
       end
